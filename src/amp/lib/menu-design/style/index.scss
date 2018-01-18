@@ -1,0 +1,41 @@
+.amp-menu-content{
+    padding: 10px 80px 30px;
+    min-height: 350px;
+    background: #fff;
+    margin: 30px;
+}
+.ant-tree li{
+    line-height: 28px;
+    input{
+        height: 22px;
+        width: 130px;
+    }
+}
+.amp-menu-header {
+    width: 80%;
+    margin-bottom: 15px;
+    line-height: 40px;
+    padding-left: 20px;
+    > span {
+        font-size: 20px;
+    }
+}
+
+.amp-menu-bottom {
+    width: 100%;
+    margin-top: 10px;
+    text-align: right;
+    border-bottom: 1px solid #d9d9d9;
+    line-height: 50px;
+    > span {
+        font-size: 20px;
+    }
+    > button {
+        margin-right: 10px;
+    }
+
+}
+
+.amp-menu-body {
+    position: relative;
+}

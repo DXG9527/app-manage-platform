@@ -1,0 +1,119 @@
+.amp-widget {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .ant-form-extra{
+        line-height: 20px;
+    }
+}
+
+.amp-widget-list {
+    width: 200px;
+    padding: 65px 0 15px 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    z-index: 2;
+    min-height: 500px;
+    text-align: right;
+    > ul {
+        border-right: 1px solid #ddd;
+        height: 100%;
+        font-size: 14px;
+        > li {
+            line-height: 35px;
+            padding: 0 20px 0 0;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        > li:first-child {
+            margin-top: 0;
+        }
+        > li:hover {
+            background: #DDF1F5;
+            color: #111;
+        }
+    }
+}
+
+.amp-widget-detail {
+    width: 100%;
+    height: 100%;
+    padding: 15px 30px 30px 25px;
+    z-index: 1;
+    min-height: 500px;
+    button {
+        margin-right: 20px;
+    }
+}
+
+.amp-widget-title {
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    color: #444;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    box-shadow: 0px 1px 3px #ddd;
+    font-size: 14px;
+    padding-left: 30px;
+    > span {
+        font-size: 20px;
+        font-weight: 900;
+        padding: 0 5px;
+    }
+}
+
+.amp-widget-cell {
+    line-height: 28px;
+    margin: 0px 0px 20px 10px;
+}
+
+.amp-widget-name {
+    float: left;
+    width: 140px;
+    text-align: right;
+    > span {
+        color: red;
+    }
+}
+
+.amp-widget-value {
+    float: left;
+    width: 330px;
+}
+
+.amp-widget-state {
+    float: left;
+    width: 100px;
+}
+
+.amp-widget-btn {
+    width: 650px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.success-title {
+    font-size: 14px;
+    color: #2c70e9;
+}
+
+.amp-check {
+    width: 74px;
+    color: #2c70e9;
+    border-bottom: 1px solid #2c70e9;
+    position: absolute;
+    top: 7px;
+    left: 103%;
+    line-height: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+

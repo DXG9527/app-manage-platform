@@ -1,0 +1,42 @@
+$component-colors: (
+    dark:(
+        base:#2B3643, //基色
+        hoverFont:#fff, //菜单hover字体颜色
+        bgColor:#364150, //菜单背景色
+        font:#b4bcc8, // 菜单字体颜色
+        activeColor:#3e4b5d, //菜单hover背景色
+        selColor:#87c0e4, //菜单选中的背景色
+        selFont:#fff, //菜单选中字体颜色
+        openColor:#2C3542 //父菜单展开的背景色
+    ),
+    light-black:(
+        base:#2b2b2b,
+        hoverFont:#2b2b2b,
+        bgColor:#fff,
+        font:#6a6c6f,
+        activeColor:#efefef,
+        selColor:#adb3b9,
+        selFont:#fff,
+        openColor:#e5e5e5,
+    ),
+    light-blue:(
+        base:#188ae2,
+        hoverFont:#188ae2,
+        bgColor:#fff,
+        font:#6a6c6f,
+        activeColor:#efefef,
+        selColor:#4eaaf1,
+        selFont:#fff,
+        openColor:#e5e5e5,
+    ),
+    light-red:(
+        base:#ff5b5b,
+        hoverFont:#ff5b5b,
+        bgColor:#fff,
+        font:#6a6c6f,
+        activeColor:#efefef,
+        selColor:#fd7373,
+        selFont:#fff,
+        openColor:#e5e5e5,
+    )
+);

@@ -1,0 +1,24 @@
+@import "../../utils/style";
+
+.amp-list-widget {
+    .col-title {
+        width: 15%;
+    }
+
+    .col-loadtype {
+        width: 11%;
+    }
+    .col-des {
+        width: 23%;
+        min-height: 50px;
+    }
+    .col-state {
+        width: 11%;
+        min-height: 50px;
+    }
+    .col-opt {
+        width: 20% !important;
+    }
+
+}
+

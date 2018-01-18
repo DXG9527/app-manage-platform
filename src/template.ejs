@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="polyfills/css/polyfills.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
+    <% var stylesheets = htmlWebpackPlugin.options.stylesheets || [] %>
+    <% for(var i = 0; i < stylesheets.length; i++) { %>
+    <link rel="stylesheet" href="<%= stylesheets[i] %>">
+    <% } %>
+    <script type="text/javascript" src="constants.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="polyfills/js/ie8-polyfills.js"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <script type="text/javascript" src="polyfills/js/ie9-polyfills.js"></script>
+    <![endif]-->
+</head>
+<body >
+<div id="app" class=<%= htmlWebpackPlugin.options.defaultTheme %>></div>
+<div class="ud-polyfills-browser-warning">
+    <p class="win-7">检测到您的浏览器版本较低，请升级到最新的 <a target="_blank" href="<%= htmlWebpackPlugin.options.ie11Url %>">Internet
+        Explorer 11</a> 浏览器或者下载安装 <a target="_blank" href="<%= htmlWebpackPlugin.options.chromeFrameUrl %>">Google
+        Chrome Frame</a> 框架后打开。</p>
+    <p class="win-xp">检测到您的浏览器版本较低，请下载安装 <a target="_blank" href="<%= htmlWebpackPlugin.options.chromeFrameUrl %>">Google
+        Chrome Frame</a> 后打开。</p>
+    <a href="javascript:void(0);" id="close-warning" class="close">&times;</a>
+</div>
+<script type="text/javascript" id="ud-polyfills" data-base-url="polyfills/js/" src="polyfills/js/polyfills.js"></script>
+<% var scripts = htmlWebpackPlugin.options.scripts || [] %>
+<% for(var i = 0; i < scripts.length; i++) { %>
+<script type="text/javascript" src="<%= scripts[i] %>"></script>
+<% } %>
+</body>
+</html>

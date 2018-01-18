@@ -1,0 +1,124 @@
+@import "../../utils/themes/colors";
+
+.ant-layout-sider-collapsed .anticon {
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.ant-menu {
+    color: #6a6c6f;
+}
+
+.ant-layout-sider-collapsed {
+    .ant-menu-submenu-title .nav-text{
+        display: none;
+    }
+
+}
+.ant-menu-inline-collapsed, .ant-menu-vertical.ant-menu-inline-collapsed{
+    width: 50px !important;
+}
+.ant-menu-vertical.ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title{
+    text-align: center;
+}
+.ant-menu-inline-collapsed>.ant-menu-item{
+    text-align: center;
+}
+.ant-layout-sider-collapsed>.ant-layout-sider-children>.ant-menu-vertical{
+    >.ant-menu-item>span>.nav-text{
+        display: none;
+    }
+}
+.ant-layout-sider-collapsed>.ant-menu-vertical{
+    >.ant-menu-item>span>.nav-text{
+        display: none;
+    }
+}
+.ant-layout-sider-collapsed .ant-menu-submenu-title.nav-text {
+    display: none;
+}
+
+.ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical .ant-menu-item {
+    padding: 0 9px !important;
+}
+
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+    display: none;
+}
+
+@mixin ant-menu-item($bgColor, $font) {
+    background: $bgColor !important;
+    color: $font !important;
+}
+
+@mixin ant-menu-active($activeColor, $hoverFont) {
+    background: $activeColor !important;
+    color: $hoverFont !important;
+    .ant-menu-submenu-title {
+        color: $hoverFont !important;
+    }
+}
+
+@mixin ant-menu-item-selected($selColor, $selFont) {
+    background: $selColor !important;
+    color: $selFont !important;
+    &:hover {
+        background: $selColor !important;
+        color: $selFont !important;
+    }
+}
+
+@mixin ant-menu-submenu-open($openColor, $hoverFont) {
+    background: $openColor !important;
+    color: $hoverFont !important;
+}
+
+@mixin ant-menu-submenu-selected($hoverFont) {
+    color: $hoverFont !important;
+}
+
+@each $name, $colors in $component-colors {
+    $bgColor: map-get($colors, bgColor);
+    $font: map-get($colors, font);
+    $activeColor: map-get($colors, activeColor);
+    $hoverFont: map-get($colors, hoverFont);
+    $selColor: map-get($colors, selColor);
+    $selFont: map-get($colors, selFont);
+    $openColor: map-get($colors, openColor);
+    .theme-#{$name} {
+        .ant-menu-submenu, .ant-menu-item {
+            @include ant-menu-item($bgColor, $font);
+        }
+        .ant-menu-submenu-active, .ant-menu-item-active {
+            @include ant-menu-active($activeColor, $hoverFont);
+        }
+        .ant-menu-item-selected {
+            @include ant-menu-item-selected($selColor, $selFont);
+        }
+        .ant-menu-submenu-open {
+            @include ant-menu-submenu-open($openColor, $hoverFont);
+        }
+        .ant-menu-submenu-selected {
+            @include ant-menu-submenu-selected($hoverFont);
+        }
+    }
+}
+
+.amp-menu-tri {
+    position: absolute;
+    top: 9px;
+    right: 0px;
+    display: none;
+    border-top: 11px solid transparent;
+    border-right: 12px solid #EEF1F5;
+    border-bottom: 11px solid transparent;
+}
+
+.ant-menu-item-selected .amp-menu-tri {
+    display: block;
+}
+
+.ant-menu-submenu-vertical .amp-menu-tri {
+    display: none !important;
+}
+

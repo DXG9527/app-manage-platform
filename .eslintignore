@@ -1,0 +1,16 @@
+node_modules/**
+src/vendor/**
+dist/**/*.*
+lib/**
+**/*.css
+**/*.html
+**/*.scss
+**/*.json
+**/*.md
+**/*.svg
+**/*.png
+**/*.iml
+**/*.mp3
+**/*.ejs
+test/**
+

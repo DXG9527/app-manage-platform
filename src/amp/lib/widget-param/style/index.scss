@@ -1,0 +1,186 @@
+$height: 30px;
+.amp-param {
+    width: 100%;
+    padding: 25px 30px 30px 25px;
+
+}
+
+.amp-param-left {
+    width: 23.5%;
+    height: 485px;
+    float: left;
+    box-sizing: border-box;
+    .amp-setting-term {
+        margin-bottom: 15px;
+        input {
+            width: 110px !important;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .term-span {
+            letter-spacing: 1px;
+        }
+    }
+    .amp-param-page {
+        height: 30px;
+        line-height: 30px;
+        border-top: 1px solid #ddd;
+        width: 100%;
+        .ant-pagination {
+            float: right;
+            .ant-pagination-prev a {
+                background: #ececec;
+            }
+            margin: 5px 0;
+        }
+    }
+}
+
+.amp-param-list {
+    width: 100%;
+    max-height: 450px;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    .amp-param-list-cell {
+        width: 100%;
+        line-height: $height;
+        height: $height;
+        box-sizing: border-box;
+    }
+    .cell-focus {
+        background: #82bbe9 !important;
+    }
+    .amp-param-list-cell:nth-child(2n) {
+        background: #f3f3f3;
+    }
+    .amp-param-list-cell:last-child {
+        border-bottom: 0;
+    }
+    .amp-param-content {
+        width: 100%;
+        max-height: 380px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .param-add {
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        border-top: 1px solid #ddd;
+        background: #fff;
+    }
+    .amp-param-head {
+        background: #eee;
+    }
+    .amp-param-raw {
+        width: 40%;
+        border-left: 1px solid #e3e3e3;
+        height: $height;
+        float: left;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 4px;
+        > i {
+            font-size: 16px;
+        }
+    }
+
+    .amp-param-opt {
+        width: 13%;
+        height: $height;
+        float: left;
+        text-align: center;
+        > i {
+            font-size: 14px;
+            cursor: pointer;
+        }
+        > i:first-child {
+            margin-right: 10px;
+        }
+        > i:hover {
+            color: #108ee9;
+        }
+        > .disabled {
+            cursor: not-allowed;
+            color: #ddd !important;
+        }
+    }
+}
+
+.amp-param-right {
+    width: 76.5%;
+    height: 485px;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 45px;
+    .amp-param-list {
+        width: 100%;
+        max-height: 470px;
+        .amp-param-list-cell {
+            box-sizing: border-box;
+            .amp-param-raw {
+                width: 13.5% !important;
+                .ant-select{
+                    width: 100%;
+                }
+            }
+            .amp-param-state {
+                width: 11%;
+                border-left: 1px solid #e3e3e3;
+                height: $height;
+                float: left;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 0 4px;
+            }
+            .amp-param-opt {
+                width: 7.5%;
+            }
+        }
+        .amp-param-content {
+            width: 100%;
+            max-height: 415px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        .amp-param-head {
+            background: #eee;
+        }
+
+    }
+}
+
+.amp-setting-title {
+    line-height: 25px;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.amp-param-bottom {
+    line-height: 50px;
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+    button {
+        margin-right: 15px;
+    }
+}
+
+

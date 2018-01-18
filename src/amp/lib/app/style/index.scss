@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import "../../utils/themes/colors";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #f3f3f4 !important;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+}
+
+#app > .ant-layout {
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.ant-layout-header {
+    height: 50px !important;
+    line-height: 50px !important;
+    z-index: 10;
+}
+
+.ant-layout-sider {
+    flex: 0 0 250px !important;
+    width: 220px !important;
+    z-index: 5;
+    padding-top: 10px;
+}
+
+@mixin ant-layout-sider($bgColor) {
+    background: $bgColor !important;
+}
+
+@mixin ant-layout-sider-trigger($bgColor,$hoverFont) {
+    background: $bgColor !important;
+    color: $hoverFont !important;
+}
+
+.ant-layout-content {
+    background: #f3f3f3 !important;
+    overflow-x: auto !important;
+}
+.amp-trigger{
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+}
+.amp-trigger>i{
+    margin-left: 0 !important;
+    font-size: 15px;
+}
+@mixin amp_trigger($font){
+    color: $font;
+}
+
+.amp-menu-search {
+    width: 180px;
+    margin: 15px 30px;
+    height: 32px;
+    color: #979DA5;
+    border-bottom: 1px solid #979DA5;
+    > input {
+        width: 150px;
+        height: 30px;
+        border: 0;
+        outline: none;
+    }
+    > input:focus {
+        border: 0;
+    }
+    > i {
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+@mixin amp-menu-search($bgColor, $hoverFont) {
+    > input {
+        background: $bgColor;
+    }
+    > i:hover {
+        color: $hoverFont;
+    }
+}
+
+.amp-menu-search-little {
+    width: 34px !important;
+    text-align: center;
+    color: #979DA5;
+    margin: 15px 10px;
+    height: 32px;
+    line-height: 32px;
+    > input {
+        display: none;
+    }
+    > input:focus {
+        border: 0;
+    }
+    > i {
+        font-size: 16px;
+        margin: 0 !important;
+    }
+    > i:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin amp-menu-search-little($hoverFont) {
+    > i:hover {
+        color: $hoverFont;
+    }
+}
+
+@each $name, $colors in $component-colors {
+    $bgColor: map-get($colors, bgColor);
+    $hoverFont: map-get($colors, hoverFont);
+    $font: map-get($colors, font );
+    .theme-#{$name} {
+        .ant-layout-sider-trigger {
+            @include ant-layout-sider-trigger($bgColor, $hoverFont);
+        }
+        .ant-layout-sider {
+            @include ant-layout-sider($bgColor);
+        }
+        .amp-menu-search {
+            @include amp-menu-search($bgColor, $hoverFont);
+        }
+        .amp-menu-search-little {
+            @include amp-menu-search-little($hoverFont);
+        }
+        .amp-trigger{
+            @include amp_trigger($font);
+        }
+    }
+}
+
+.ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title,
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title {
+    height: 40px !important;
+    line-height: 40px !important;
+}
+
+.ant-layout-sider-collapsed {
+    flex: 0 0 50px !important;
+    width: 50px !important;
+}
+
+$cellHeight: 50px;
+
+.amp-list {
+    width: 100%;
+    padding: 5px 30px 30px;
+}
+
+.amp-list-title {
+    margin-bottom: 15px;
+    background: #fff;
+    color: #444;
+    height: $cellHeight;
+    line-height: $cellHeight;
+    border-bottom: 1px solid #e7ecf1;
+    font-size: 14px;
+    padding-left: 30px;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    > span {
+        font-size: 20px;
+        font-weight: 900;
+        padding: 0 5px;
+    }
+}
+
+.amp-list-head {
+    width: 100%;
+    background: #fff;
+    line-height: 40px;
+    min-height: 40px;
+    box-shadow: 1px 1px 3px #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    .amp-list-cell-col {
+        line-height: 40px !important;
+        min-height: 40px !important;
+    }
+}
+
+.amp-list-row {
+    width: 100%;
+    background: #fff;
+    line-height: $cellHeight;
+    min-height: $cellHeight;
+    box-shadow: 1px 1px 3px #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.amp-list-cell-col {
+    float: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.col-title {
+    width: 25%;
+    min-height: $cellHeight;
+}
+
+.col-type {
+    width: 15%;
+    min-height: $cellHeight;
+}
+
+.col-time {
+    width: 18%;
+    min-height: $cellHeight;
+}
+
+.col-opt {
+    width: 22%;
+    min-height: $cellHeight;
+    padding-right: 30px;
+    text-align: right;
+    display: none;
+    > i {
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    > i:hover {
+        color: #000;
+    }
+    > .anticon-edit {
+        font-size: 22px;
+    }
+}
+
+.amp-list-row:hover {
+    background: #DDF1F5;
+}
+
+.amp-list-row-focus {
+    background: #DDF1F5 !important;
+}
+
+.amp-list-row-focus .col-opt {
+    display: block !important;
+}
+
+.amp-list-row:hover .col-opt {
+    display: block;
+}
+
+.amp-list-add {
+    float: right;
+    font-size: 15px;
+    margin-right: 30px;
+    cursor: pointer;
+    > i {
+        margin-right: 5px;
+    }
+}
+
+.amp-list-add:hover {
+    color: #108ee9;
+}
+
+.amp-list-search {
+    width: 100%;
+    line-height: $cellHeight;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    .amp-search-term {
+        float: left;
+        margin-right: 20px;
+        > span {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        > input {
+            display: inline-block;
+            width: 130px;
+        }
+        > .ant-select {
+            width: 90px;
+        }
+        .amp-date-range {
+            display: inline-block;
+            > span {
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+.amp-list-null {
+    padding-left: 20px;
+}
+
+.amp-list-loading {
+    margin-top: 30px;
+    padding-left: 40px;
+}
+
+.confirm {
+    width: 300px !important;
+    .ant-modal-header {
+        padding: 5px 15px !important;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .ant-modal-footer {
+        border-top: 0;
+    }
+}
+
+.amp-list-box{
+    min-width: 1025px;
+    overflow: auto;
+}
+.amp-widget{
+    min-width: 1100px;
+    overflow: auto;
+}
